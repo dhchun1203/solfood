@@ -30,7 +30,7 @@ function StarRating({ count }: { count: number }) {
 function ReviewCard({ item, index }: { item: ReviewItem; index: number }) {
   return (
     <motion.div
-      className="flex min-h-[280px] flex-col justify-between rounded-2xl border border-zinc-100 bg-white p-6 shadow-card sm:p-8"
+      className="flex min-h-[260px] flex-col justify-between rounded-2xl border border-zinc-100 bg-white p-5 shadow-card sm:p-6 md:p-8"
       initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={viewport}
@@ -60,7 +60,7 @@ export function Review() {
       <Container>
         <SectionTitle>고객 후기</SectionTitle>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="mt-10 sm:mt-14 grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-12">
           {REVIEWS.map((item, i) => (
             <ReviewCard key={item.id} item={item} index={i} />
           ))}

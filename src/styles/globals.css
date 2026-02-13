@@ -15,7 +15,9 @@ body {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   background-color: #fafafa;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
+
 
 /* 그라디언트 텍스트 강조 (브랜드 컬러) */
 .text-gradient-brand {

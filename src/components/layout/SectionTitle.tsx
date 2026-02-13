@@ -17,7 +17,7 @@ export function SectionTitle({ children, className = '' }: SectionTitleProps) {
       viewport={viewport}
       transition={{ duration: 0.55, ease }}
     >
-      <h2 className="font-gamja text-2xl text-zinc-900 md:text-3xl lg:text-4xl">
+      <h2 className="font-gamja text-xl text-zinc-900 sm:text-2xl md:text-3xl lg:text-4xl">
         {children}
       </h2>
       <div className="mx-auto mt-4 flex items-center justify-center gap-1.5">

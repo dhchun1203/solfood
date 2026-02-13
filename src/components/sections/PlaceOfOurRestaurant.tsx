@@ -13,15 +13,15 @@ export function PlaceOfOurRestaurant() {
       <Container>
         <SectionTitle>매장 안내</SectionTitle>
 
-        <div className="mt-16 grid grid-cols-1 items-center gap-14 lg:grid-cols-[0.9fr_1fr] xl:mt-20">
+        <div className="mt-10 sm:mt-16 grid grid-cols-1 items-center gap-10 sm:gap-14 lg:grid-cols-[0.9fr_1fr] xl:mt-20">
           <motion.div
-            className="max-w-md lg:justify-self-end"
+            className="mx-auto max-w-md text-center lg:mx-0 lg:justify-self-end lg:text-left"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewport}
             transition={{ duration: 0.55, ease }}
           >
-            <h3 className="text-3xl font-extrabold leading-tight text-zinc-900 md:text-4xl">
+            <h3 className="text-2xl font-extrabold leading-tight text-zinc-900 sm:text-3xl md:text-4xl">
               쾌적하고 편안한 공간
             </h3>
             <p className="mt-6 max-w-md text-xs leading-relaxed text-zinc-600 lg:text-sm">
@@ -30,7 +30,7 @@ export function PlaceOfOurRestaurant() {
           </motion.div>
 
           <motion.div
-            className="group relative mx-auto flex w-full max-w-[400px] justify-center overflow-visible lg:max-w-[420px] lg:justify-end"
+            className="group relative mx-auto flex w-full max-w-[320px] sm:max-w-[380px] justify-center overflow-visible lg:max-w-[420px] lg:justify-end"
             initial={{ opacity: 0, scale: 0.99 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={viewport}

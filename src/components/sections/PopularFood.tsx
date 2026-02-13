@@ -34,7 +34,7 @@ function FoodCard({ item, index }: { item: FoodItem; index: number }) {
 
   return (
     <motion.div
-      className="group relative flex min-h-[440px] flex-col overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-card transition-shadow hover:shadow-card-hover"
+      className="group relative flex min-h-[380px] sm:min-h-[400px] lg:min-h-[440px] flex-col overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-card transition-shadow hover:shadow-card-hover"
       role="article"
       initial={{ opacity: 0, y: 14 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -42,7 +42,7 @@ function FoodCard({ item, index }: { item: FoodItem; index: number }) {
       transition={{ duration: 0.55, delay: staggerDelay, ease }}
       whileHover={{ y: -4, transition: { duration: 0.2 } }}
     >
-      <div className="relative flex h-[200px] flex-shrink-0 items-center justify-center p-6 md:h-[220px] lg:h-[240px]">
+      <div className="relative flex h-[160px] flex-shrink-0 items-center justify-center p-4 sm:h-[200px] sm:p-6 md:h-[220px] lg:h-[240px]">
         <img
           src={item.img}
           alt={item.title}
@@ -60,14 +60,14 @@ function FoodCard({ item, index }: { item: FoodItem; index: number }) {
           <Heart size={20} strokeWidth={2} className={isLiked ? 'fill-red-500 text-red-500' : ''} />
         </motion.button>
       </div>
-      <div className="flex flex-1 flex-col px-6 pb-6 pt-4">
+      <div className="flex flex-1 flex-col px-6 pb-6 pt-4 text-center sm:text-left">
         <h3 className="min-h-[2rem] truncate text-sm font-semibold text-zinc-900 sm:text-base">{item.title}</h3>
         <p className="mt-3 min-h-[2.5rem] line-clamp-2 text-xs leading-relaxed text-zinc-600">{item.desc}</p>
-        <div className="mt-5 flex items-center justify-between">
+        <div className="mt-5 flex items-center justify-center gap-4 sm:justify-between">
           <span className="text-base font-semibold text-zinc-900">{item.price} 달러</span>
           <motion.button
             type="button"
-            className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-[var(--brand-yellow)] text-zinc-900 transition hover:brightness-95"
+            className="flex h-11 w-11 min-w-[44px] min-h-[44px] flex-shrink-0 items-center justify-center rounded-xl bg-[var(--brand-yellow)] text-zinc-900 transition hover:brightness-95 active:scale-95"
             aria-label={`${item.title} 장바구니에 담기`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
@@ -89,14 +89,14 @@ export function PopularFood() {
         <SectionTitle>인기 메뉴</SectionTitle>
 
         <motion.div
-          className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between"
+          className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-between"
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
           transition={{ duration: 0.5, delay: 0.1, ease }}
         >
-          <div className="w-fit max-w-full overflow-hidden rounded-2xl border border-zinc-200 bg-white px-4 py-3 shadow-card">
-            <div className="flex items-center gap-3 overflow-x-auto pb-1 sm:gap-4">
+          <div className="w-full sm:w-fit max-w-full rounded-2xl border border-zinc-200 bg-white px-3 py-3 shadow-card">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start sm:gap-4 md:flex-nowrap">
               {CATEGORIES.map((cat) => (
                 <motion.button
                   key={cat}
@@ -121,7 +121,7 @@ export function PopularFood() {
           </button>
         </motion.div>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {FOOD_ITEMS.map((item, idx) => (
             <FoodCard key={`${item.id}-${idx}`} item={item} index={idx} />
           ))}

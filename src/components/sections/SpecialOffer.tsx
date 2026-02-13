@@ -14,10 +14,10 @@ export function SpecialOffer() {
       <Container>
         <SectionTitle>특별 할인</SectionTitle>
 
-        <div className="mt-14 grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.1fr_1fr]">
+        <div className="mt-10 sm:mt-14 grid grid-cols-1 items-center gap-10 sm:gap-14 lg:grid-cols-[1.1fr_1fr]">
           {/* Left: Visual card - 레이어 순차 등장 */}
           <motion.div
-            className="relative mx-auto h-[364px] w-[364px] md:h-[424px] md:w-[424px] lg:h-[464px] lg:w-[464px]"
+            className="relative mx-auto h-[260px] w-[260px] min-[480px]:h-[320px] min-[480px]:w-[320px] sm:h-[380px] sm:w-[380px] md:h-[420px] md:w-[420px] lg:h-[464px] lg:w-[464px]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={viewport}
@@ -26,7 +26,7 @@ export function SpecialOffer() {
           >
             {/* 1) Shadow - 먼저 */}
             <motion.div
-              className="absolute left-6 top-6 h-[340px] w-[340px] rounded-2xl bg-[#B0B0B0] blur-[12px] md:h-[400px] md:w-[400px] lg:h-[440px] lg:w-[440px]"
+              className="absolute left-4 top-4 h-[220px] w-[220px] rounded-2xl bg-[#B0B0B0] blur-[12px] min-[480px]:left-5 min-[480px]:top-5 min-[480px]:h-[280px] min-[480px]:w-[280px] sm:h-[340px] sm:w-[340px] sm:left-6 sm:top-6 md:h-[380px] md:w-[380px] lg:h-[440px] lg:w-[440px]"
               aria-hidden
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -35,7 +35,7 @@ export function SpecialOffer() {
             />
             {/* 2) Olive - 다음 */}
             <motion.div
-              className="absolute left-0 top-0 flex h-[340px] w-[340px] items-center justify-center overflow-hidden rounded-2xl bg-[#6F7A6A] md:h-[400px] md:w-[400px] lg:h-[440px] lg:w-[440px]"
+              className="absolute left-0 top-0 flex h-[220px] w-[220px] items-center justify-center overflow-hidden rounded-2xl bg-[#6F7A6A] min-[480px]:h-[280px] min-[480px]:w-[280px] sm:h-[340px] sm:w-[340px] md:h-[380px] md:w-[380px] lg:h-[440px] lg:w-[440px]"
               aria-hidden
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ export function SpecialOffer() {
           </motion.div>
 
           {/* Right: Text - stagger */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col items-center justify-center text-center md:items-start md:text-left">
             <motion.h3
               className="text-2xl font-extrabold leading-tight text-zinc-900 md:text-3xl lg:text-3xl"
               initial={{ opacity: 0, y: 12 }}
@@ -78,7 +78,7 @@ export function SpecialOffer() {
             </motion.p>
             <motion.a
               href="#menu"
-              className="mt-9 inline-flex w-fit items-center gap-3 rounded-xl bg-[var(--brand-yellow)] px-8 py-3.5 text-sm font-semibold text-zinc-900 shadow-card transition-all hover:brightness-95 hover:shadow-card-hover"
+              className="mt-9 inline-flex w-fit items-center justify-center gap-3 rounded-xl bg-[var(--brand-yellow)] px-8 py-3.5 text-sm font-semibold text-zinc-900 shadow-card transition-all hover:brightness-95 hover:shadow-card-hover"
               initial={{ opacity: 0, y: 8 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}

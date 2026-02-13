@@ -26,18 +26,18 @@ const ease = [0.22, 1, 0.36, 1] as const
 function OrderStepCard({ title, desc, img, index }: StepCard & { index: number }) {
   return (
     <motion.div
-      className="group min-h-[440px] overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-card transition-shadow hover:shadow-card-hover"
+      className="group min-h-[360px] sm:min-h-[400px] lg:min-h-[440px] overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-card transition-shadow hover:shadow-card-hover"
       initial={{ opacity: 0, y: 14 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={viewport}
       transition={{ duration: 0.55, delay: index * 0.1, ease }}
       whileHover={{ y: -4, transition: { duration: 0.2 } }}
     >
-      <div className="flex h-[240px] items-center justify-center p-6">
+      <div className="flex h-[180px] flex-shrink-0 items-center justify-center overflow-hidden p-4 sm:h-[220px] sm:p-6 lg:h-[240px]">
         <motion.img
           src={img}
           alt={title}
-          className="max-h-[200px] w-auto object-contain"
+          className="max-h-[140px] w-auto object-contain sm:max-h-[180px] lg:max-h-[200px]"
           draggable={false}
           whileHover={{ scale: 1.02 }}
         />
@@ -56,7 +56,7 @@ export function HowYouCanOrder() {
       <Container>
         <SectionTitle>주문 방법</SectionTitle>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 sm:mt-14 grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((s, i) => (
             <OrderStepCard key={s.title} {...s} index={i} />
           ))}

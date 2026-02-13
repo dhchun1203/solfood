@@ -21,7 +21,7 @@ export function StayInTouch() {
         <SectionTitle>연락처</SectionTitle>
 
         <motion.div
-          className="mx-auto mt-14 max-w-[300px] sm:max-w-[400px] md:max-w-[520px] lg:max-w-[600px]"
+          className="mx-auto mt-10 sm:mt-14 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[520px] lg:max-w-[600px]"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
@@ -29,7 +29,7 @@ export function StayInTouch() {
         >
           <form
             onSubmit={handleSubmit}
-            className="rounded-2xl border border-zinc-100 bg-white p-6 shadow-card sm:p-8 md:p-10"
+            className="rounded-2xl border border-zinc-100 bg-white p-5 text-center shadow-card sm:p-8 md:text-left md:p-10"
           >
             <motion.h3
               className="mb-8 text-center text-2xl font-bold text-zinc-900 sm:mb-9 md:text-3xl"
@@ -57,13 +57,13 @@ export function StayInTouch() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="이메일을 입력하세요"
-                className="h-14 w-full rounded-xl border border-zinc-200 px-5 text-sm text-zinc-900 placeholder:text-zinc-400 transition-colors focus:border-[var(--brand-yellow)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-yellow)] focus:ring-opacity-20"
+                className="h-14 min-h-[48px] w-full rounded-xl border border-zinc-200 px-5 text-base text-zinc-900 placeholder:text-zinc-400 transition-colors focus:border-[var(--brand-yellow)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-yellow)] focus:ring-opacity-20"
               />
             </motion.div>
 
             <motion.button
               type="submit"
-              className="h-14 w-full rounded-xl bg-[var(--brand-yellow)] text-sm font-semibold text-zinc-900 shadow-card transition hover:brightness-95 hover:shadow-card-hover"
+              className="h-14 min-h-[48px] w-full rounded-xl bg-[var(--brand-yellow)] text-base font-semibold text-zinc-900 shadow-card transition hover:brightness-95 hover:shadow-card-hover active:scale-[0.99]"
               initial={{ opacity: 0, y: 8 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
@@ -85,7 +85,7 @@ export function StayInTouch() {
           <img
             src={SolfoodLarge}
             alt="Solfood"
-            className="h-auto w-full max-w-[240px] md:max-w-[360px] lg:max-w-[440px]"
+            className="h-auto w-full max-w-[200px] sm:max-w-[280px] md:max-w-[360px] lg:max-w-[440px]"
             draggable={false}
           />
         </motion.div>

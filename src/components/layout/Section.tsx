@@ -12,7 +12,7 @@ export function Section({ children, className = '', id, alt }: SectionProps) {
   return (
     <section
       id={id}
-      className={`py-16 md:py-24 ${alt ? 'bg-white' : ''} ${className}`.trim()}
+      className={`py-12 sm:py-16 md:py-24 ${alt ? 'bg-white' : ''} ${className}`.trim()}
     >
       {children}
     </section>

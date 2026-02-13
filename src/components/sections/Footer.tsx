@@ -17,7 +17,7 @@ const ease = [0.22, 1, 0.36, 1] as const
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-zinc-900 pt-16 pb-8 md:pt-24 md:pb-10">
+    <footer className="relative overflow-hidden bg-zinc-900 pt-12 pb-8 sm:pt-16 md:pt-24 md:pb-10">
       {/* Subtle decorative gradient */}
       <div
         className="pointer-events-none absolute inset-0 opacity-30"
@@ -28,7 +28,7 @@ export function Footer() {
 
       <Container>
         <motion.div
-          className="relative grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8"
+          className="relative grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-12 lg:gap-8"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
@@ -37,7 +37,7 @@ export function Footer() {
           {/* Brand column - wider */}
           <div className="lg:col-span-5">
             <a href="#home" className="inline-block">
-              <img src={SolfoodLogo} alt="Solfood" className="mb-6 w-[160px] brightness-0 invert opacity-95" />
+              <img src={SolfoodLogo} alt="Solfood" className="mb-6 w-[140px] sm:w-[160px] brightness-0 invert opacity-95" />
             </a>
             <p className="max-w-xs text-sm leading-relaxed text-zinc-400">
               맛있는 음식과 새로운 경험을 선사합니다.
