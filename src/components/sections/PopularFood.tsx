@@ -89,7 +89,7 @@ export function PopularFood() {
         <SectionTitle>인기 메뉴</SectionTitle>
 
         <motion.div
-          className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-between"
+          className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-center"
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
