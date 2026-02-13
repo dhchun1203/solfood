@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-yellow: #F0C64C;
+  --brand-yellow-soft: rgba(240, 198, 76, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background-color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 그라디언트 텍스트 강조 (브랜드 컬러) */
+.text-gradient-brand {
+  background: linear-gradient(135deg, #FFE566 0%, #F0C64C 30%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
