@@ -18,11 +18,24 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Remove focus outline/ring from all elements */
-*:focus,
-*:focus-visible {
+/* Remove focus outline/ring from all elements except inputs */
+*:focus:not(input):not(textarea):not(select),
+*:focus-visible:not(input):not(textarea):not(select) {
   outline: none !important;
   box-shadow: none !important;
+}
+
+/* Prevent text selection (blue block) on non-input elements */
+*:not(input):not(textarea):not(select) {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input,
+textarea,
+select {
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 

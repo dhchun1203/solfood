@@ -66,10 +66,10 @@ export function Hero() {
               있으며, 합리적인 가격으로 최고의 맛을 선사하겠습니다.
             </motion.p>
 
-            <div className="mt-6 flex flex-col flex-wrap items-center gap-3 sm:mt-8 sm:flex-row sm:gap-4 lg:justify-start">
+            <div className="mt-6 flex w-full flex-col flex-wrap items-stretch gap-3 sm:mt-8 sm:w-auto sm:flex-row sm:items-center sm:gap-4 lg:justify-start">
               <motion.a
                 href="#menu"
-                className="inline-flex items-center justify-center gap-3 rounded-xl bg-[var(--brand-yellow)] px-6 py-3.5 min-h-[48px] text-sm font-semibold text-zinc-900 shadow-card transition-all hover:-translate-y-0.5 hover:shadow-card-hover active:scale-[0.98]"
+                className="inline-flex w-full items-center justify-center gap-3 rounded-xl bg-[var(--brand-yellow)] px-6 py-3.5 min-h-[48px] text-sm font-semibold text-zinc-900 shadow-card transition-all hover:-translate-y-0.5 hover:shadow-card-hover active:scale-[0.98] sm:w-auto"
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.34, ease: [0.22, 1, 0.36, 1] }}
@@ -80,7 +80,7 @@ export function Hero() {
               </motion.a>
               <motion.a
                 href="#about"
-                className="inline-flex items-center justify-center rounded-xl border-2 border-[var(--brand-yellow)] px-6 py-3.5 min-h-[48px] text-sm font-semibold text-zinc-900 transition-colors hover:bg-[var(--brand-yellow)]/10 active:scale-[0.98]"
+                className="inline-flex w-full items-center justify-center rounded-xl border-2 border-[var(--brand-yellow)] px-6 py-3.5 min-h-[48px] text-sm font-semibold text-zinc-900 transition-colors hover:bg-[var(--brand-yellow)]/10 active:scale-[0.98] sm:w-auto"
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
