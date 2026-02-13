@@ -56,7 +56,7 @@ export function Header() {
             <img
               src={SolfoodLogo}
               alt="Solfood"
-              className="h-6 w-auto sm:h-8"
+              className="h-12 w-auto sm:h-14"
             />
           </motion.a>
 

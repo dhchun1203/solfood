@@ -13,14 +13,14 @@ const CATEGORIES = ['전체', '국물', '음료', '매운맛', '전통', '단맛
 type FoodItem = { id: string; title: string; desc: string; price: string; img: string }
 
 const FOOD_ITEMS: FoodItem[] = [
-  { id: '1', title: '새우 볶음밥', desc: '신선한 새우, 계란, 야채가 어우러진 향긋한 볶음밥', price: '2.30', img: BaychhaImg },
-  { id: '2', title: '돼지고기 사테', desc: '땅콩 소스와 함께하는 부드러운 돼지고기 꼬치', price: '2.32', img: PorkSatayImg },
-  { id: '3', title: '파파야 샐러드', desc: '라임과 고추가 듬뿍 들어간 신선한 청파파야 샐러드', price: '2.32', img: PapayaSaladImg },
-  { id: '4', title: '돼지고기 사테', desc: '땅콩 소스와 함께하는 부드러운 돼지고기 꼬치', price: '2.32', img: PorkSatayImg },
-  { id: '5', title: '새우 볶음밥', desc: '신선한 새우, 계란, 야채가 어우러진 향긋한 볶음밥', price: '2.30', img: BaychhaImg },
-  { id: '6', title: '돼지고기 사테', desc: '땅콩 소스와 함께하는 부드러운 돼지고기 꼬치', price: '2.32', img: PorkSatayImg },
-  { id: '7', title: '파파야 샐러드', desc: '라임과 고추가 듬뿍 들어간 신선한 청파파야 샐러드', price: '2.32', img: PapayaSaladImg },
-  { id: '8', title: '돼지고기 사테', desc: '땅콩 소스와 함께하는 부드러운 돼지고기 꼬치', price: '2.32', img: PorkSatayImg },
+  { id: '1', title: '새우 볶음밥', desc: '신선한 새우, 계란, 야채가 어우러진 향긋한 볶음밥', price: '9,500', img: BaychhaImg },
+  { id: '2', title: '돼지고기 사테', desc: '땅콩 소스와 함께하는 부드러운 돼지고기 꼬치', price: '12,500', img: PorkSatayImg },
+  { id: '3', title: '파파야 샐러드', desc: '라임과 고추가 듬뿍 들어간 신선한 청파파야 샐러드', price: '7,800', img: PapayaSaladImg },
+  { id: '4', title: '돼지고기 사테', desc: '땅콩 소스와 함께하는 부드러운 돼지고기 꼬치', price: '11,900', img: PorkSatayImg },
+  { id: '5', title: '새우 볶음밥', desc: '신선한 새우, 계란, 야채가 어우러진 향긋한 볶음밥', price: '10,500', img: BaychhaImg },
+  { id: '6', title: '돼지고기 사테', desc: '땅콩 소스와 함께하는 부드러운 돼지고기 꼬치', price: '13,000', img: PorkSatayImg },
+  { id: '7', title: '파파야 샐러드', desc: '라임과 고추가 듬뿍 들어간 신선한 청파파야 샐러드', price: '8,200', img: PapayaSaladImg },
+  { id: '8', title: '돼지고기 사테', desc: '땅콩 소스와 함께하는 부드러운 돼지고기 꼬치', price: '12,000', img: PorkSatayImg },
 ]
 
 const viewport = { once: true, amount: 0.3 }
@@ -64,7 +64,7 @@ function FoodCard({ item, index }: { item: FoodItem; index: number }) {
         <h3 className="min-h-[2rem] truncate text-sm font-semibold text-zinc-900 sm:text-base">{item.title}</h3>
         <p className="mt-3 min-h-[2.5rem] line-clamp-2 text-xs leading-relaxed text-zinc-600">{item.desc}</p>
         <div className="mt-5 flex items-center justify-center gap-4 sm:justify-between">
-          <span className="text-base font-semibold text-zinc-900">{item.price} 달러</span>
+          <span className="text-base font-semibold text-zinc-900">{item.price}원</span>
           <motion.button
             type="button"
             className="flex h-11 w-11 min-w-[44px] min-h-[44px] flex-shrink-0 items-center justify-center rounded-xl bg-[var(--brand-yellow)] text-zinc-900 transition hover:brightness-95 active:scale-95"
