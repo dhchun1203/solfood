@@ -5,11 +5,10 @@ import SolfoodLogo from '@/assets/logo/Solfood.svg'
 import { Container } from '@/components/layout/Container'
 
 const navItems = [
-  { label: '홈', href: '#home' },
-  { label: '소개', href: '#about' },
-  { label: '블로그', href: '#blog' },
-  { label: '서비스', href: '#service' },
-  { label: '문의하기', href: '#contact' },
+  { label: '인기 메뉴', href: '#menu' },
+  { label: '특별 할인', href: '#offer' },
+  { label: '매장 안내', href: '#place' },
+  { label: '고객 후기', href: '#review' },
 ]
 
 export function Header() {
@@ -62,7 +61,7 @@ export function Header() {
 
           {/* Center: Navigation - 데스크톱에서만 */}
           <nav className="absolute left-1/2 hidden -translate-x-1/2 md:flex">
-            <ul className="flex items-center gap-8">
+            <ul className="flex flex-nowrap items-center gap-2 lg:gap-4">
               {navItems.map((item, i) => (
                 <motion.li
                   key={item.label}
@@ -76,7 +75,7 @@ export function Header() {
                 >
                   <a
                     href={item.href}
-                    className="text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-900"
+                    className="whitespace-nowrap rounded-lg px-3 py-2 text-sm font-medium text-zinc-600 transition-colors hover:bg-[var(--brand-yellow)]/15 hover:text-zinc-900"
                   >
                     {item.label}
                   </a>
@@ -184,7 +183,7 @@ export function Header() {
                       <a
                         href={item.href}
                         onClick={closeMenu}
-                        className="flex items-center rounded-xl px-4 py-4 text-base font-medium text-zinc-800 transition-colors active:bg-zinc-100"
+                        className="flex items-center rounded-xl px-4 py-4 text-base font-medium text-zinc-800 transition-colors hover:bg-[var(--brand-yellow)]/10 hover:text-zinc-900 active:bg-[var(--brand-yellow)]/15"
                       >
                         {item.label}
                       </a>

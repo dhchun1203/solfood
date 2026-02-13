@@ -15,33 +15,30 @@ export function SpecialOffer() {
         <SectionTitle>특별 할인</SectionTitle>
 
         <div className="mt-10 sm:mt-14 grid grid-cols-1 items-center gap-10 sm:gap-14 lg:grid-cols-[1.1fr_1fr]">
-          {/* Left: Visual card - 레이어 순차 등장 */}
+          {/* Left: Visual card - 카드(220px) 기준 그리드 셀 중앙 정렬 */}
           <motion.div
-            className="relative mx-auto h-[260px] w-[260px] min-[480px]:h-[320px] min-[480px]:w-[320px] sm:h-[380px] sm:w-[380px] md:h-[420px] md:w-[420px] lg:h-[464px] lg:w-[464px]"
+            className="flex w-full items-center justify-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={viewport}
             transition={{ duration: 0.5, ease }}
             whileHover={{ y: -2, transition: { duration: 0.2 } }}
           >
-            {/* 1) Shadow - 먼저 */}
-            <motion.div
-              className="absolute left-4 top-4 h-[220px] w-[220px] rounded-2xl bg-[#B0B0B0] blur-[12px] min-[480px]:left-5 min-[480px]:top-5 min-[480px]:h-[280px] min-[480px]:w-[280px] sm:h-[340px] sm:w-[340px] sm:left-6 sm:top-6 md:h-[380px] md:w-[380px] lg:h-[440px] lg:w-[440px]"
-              aria-hidden
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={viewport}
-              transition={{ duration: 0.5, ease }}
-            />
-            {/* 2) Olive - 다음 */}
-            <motion.div
-              className="absolute left-0 top-0 flex h-[220px] w-[220px] items-center justify-center overflow-hidden rounded-2xl bg-[#6F7A6A] min-[480px]:h-[280px] min-[480px]:w-[280px] sm:h-[340px] sm:w-[340px] md:h-[380px] md:w-[380px] lg:h-[440px] lg:w-[440px]"
-              aria-hidden
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={viewport}
-              transition={{ duration: 0.5, delay: 0.08, ease }}
-            >
+            <div className="relative h-[220px] w-[220px] min-[480px]:h-[280px] min-[480px]:w-[280px] sm:h-[340px] sm:w-[340px] md:h-[380px] md:w-[380px] lg:h-[440px] lg:w-[440px]">
+              {/* Shadow layer */}
+              <div
+                className="absolute inset-0 rounded-2xl"
+                style={{ boxShadow: '0 25px 60px -12px rgba(0,0,0,0.45), 0 16px 32px -10px rgba(0,0,0,0.35)' }}
+                aria-hidden
+              />
+              {/* Olive card */}
+              <motion.div
+                className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-2xl bg-[#6F7A6A]"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={viewport}
+                transition={{ duration: 0.5, delay: 0.08, ease }}
+              >
               {/* 3) Food - 마지막 */}
               <motion.img
                 src={Offers1Img}
@@ -54,6 +51,7 @@ export function SpecialOffer() {
                 transition={{ duration: 0.5, delay: 0.16, ease }}
               />
             </motion.div>
+            </div>
           </motion.div>
 
           {/* Right: Text - stagger */}

@@ -37,17 +37,17 @@ export function PlaceOfOurRestaurant() {
             transition={{ duration: 0.55, delay: 0.08, ease }}
             whileHover={{ y: -2, transition: { duration: 0.2 } }}
           >
-            {/* Shadow layer - SpecialOffer와 동일한 레이어드 그림자 */}
             <div
-              className="absolute left-5 top-5 -right-5 -bottom-5 rounded-2xl bg-[#B0B0B0] blur-[12px]"
-              aria-hidden
-            />
-            <img
-              src={Place1Img}
-              alt="쾌적하고 편안한 매장 인테리어"
-              className="relative z-10 w-full rounded-2xl object-cover shadow-card transition-shadow group-hover:shadow-card-hover lg:max-w-[420px]"
-              draggable={false}
-            />
+              className="relative z-10 w-full rounded-2xl transition-shadow group-hover:[box-shadow:0_10px_25px_-5px_rgba(0,0,0,0.1),0_8px_10px_-6px_rgba(0,0,0,0.04)] lg:max-w-[420px]"
+              style={{ boxShadow: '0 25px 60px -12px rgba(0,0,0,0.45), 0 16px 32px -10px rgba(0,0,0,0.35)' }}
+            >
+              <img
+                src={Place1Img}
+                alt="쾌적하고 편안한 매장 인테리어"
+                className="w-full rounded-2xl object-cover"
+                draggable={false}
+              />
+            </div>
           </motion.div>
         </div>
       </Container>
